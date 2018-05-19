@@ -2,15 +2,18 @@
 using namespace std;
 int main(void)
 {
-    int a,b,sum;
-    cout<<"please enter a:";
-    cin>>a;
-    cout<<"please enter b:";
-    cin>>b;
-    sum=a+b;
-
-    cout<<"sum= "<<sum<<endl;
-
-
+    int max(int x,int y);
+    int a,b,c;
+    cin>>a>>b;
+    c=max(a,b);
+    cout<<"max = "<<c<<endl;
     return 0;
+}
+int max(int x,int y)
+{
+    int z;
+    if(x>y)
+        z=x;
+    z=y;
+    return z;
 }
