@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
+string name[10];
 int main(void)
 {
     string st1,st2,st3,temp;
@@ -24,5 +25,8 @@ int main(void)
         {
             cout<<st2<<" "<<st3<<" "<<st1<<endl;
         }
+
+    cout<<"the size of string="<<sizeof(string)<<endl;
+    cout<<"the size of name="<<sizeof(name)<<endl;
     return 0;
 }
