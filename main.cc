@@ -1,17 +1,16 @@
 #include<iostream>
 using namespace std;
-void swap(int *p1,int *p2)
+void swap(int &a,int &b)
 {
     int temp;
-    temp=*p1;
-    *p1=*p2;
-    *p2=temp;
-    cout<<"*p1="<<*p1<<" "<<"*p2="<<*p2<<endl;
+    temp=a;
+    a=b;
+    b=temp;
 }
 int main(void)
 {
     int i=3,j=5;
-    swap(&i,&j);
+    swap(i,j);
     cout<<"i="<<i<<" "<<"j="<<j<<endl;
     return 0;
 }
