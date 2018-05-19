@@ -1,24 +1,22 @@
 #include<iostream>
 using namespace std;
-int max(int a,int b,int c)
+template<typename T>
+T max(T a,T b,T c)
 {
-    if(b>a)
-        a=b;
-    if(c>a)
-        a=c;
+    if(b>a) a=b;
+    if(c>a) a=c;
     return a;
 }
-int max(int a,int b)
-{
-    if(a>b) return a;
-    else return b;
-}
-
 int main(void)
 {
-    int a=7,b=-4,c=9;
-    cout<<"max_3="<<max(a,b,c)<<endl;
-    cout<<"max_2="<<max(a,b)<<endl;
-
+    int i1=8,i2=5,i3=6,i;
+    double d1=56.9,d2=90.765,d3=43.1,d;
+    long g1=6784,g2=-456,g3=78123,g;
+    i=max(i1,i2,i3);
+    d=max(d1,d2,d3);
+    g=max(g1,g2,g3);
+    cout<<"i_max="<<i<<endl;
+    cout<<"d_max="<<d<<endl;
+    cout<<"g_max="<<g<<endl;
     return 0;
 }
