@@ -1,30 +1,13 @@
 #include<iostream>
 using namespace std;
-class Student{
-    private:
-        int num;
-        float score;
-    public:
-        void setdate()
-        {
-            cin>>num;
-            cin>>score;
-        };
-        void display()
-        {
-            cout<<"num = "<<num<<endl;
-            cout<<"score = "<<score<<endl;
-        };
-};
-
-class Student stu1,stu2;
 int main(void)
 {
-    stu1.setdate();
-    stu2.setdate();
-
-    stu1.display();
-    stu2.display();
-    
+    cout<<"please enter your name and age: "<<endl;
+    char name[10];
+    int age;
+    cin>>name;
+    cin>>age;
+    cout<<"your name is "<<name<<endl;
+    cout<<"your age is "<<age<<endl;
     return 0;
 }
