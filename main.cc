@@ -2,48 +2,23 @@
 using namespace std;
 int max(int a,int b,int c)
 {
-    if (b>a)
+    if(b>a)
         a=b;
     if(c>a)
         a=c;
-
     return a;
 }
-float max(float a,float b,float c)
+int max(int a,int b)
 {
-    if (b>a)
-        a=b;
-    if(c>a)
-        a=c;
-
-    return a;
-}
-long max(long a,long b,long c)
-{
-    if (b>a)
-        a=b;
-    if(c>a)
-        a=c;
-
-    return a;
+    if(a>b) return a;
+    else return b;
 }
 
 int main(void)
 {
-    int a,b,c;
-    float d,e,f;
-    long g,h,i;
+    int a=7,b=-4,c=9;
+    cout<<"max_3="<<max(a,b,c)<<endl;
+    cout<<"max_2="<<max(a,b)<<endl;
 
-    cin>>a>>b>>c>>d>>e>>f>>g>>h>>i;
-    int m;
-    m=max(a,b,c);
-    cout<<"max_int="<<m<<endl;
-    float n;
-    n=max(d,e,f);
-    cout<<"max_float="<<n<<endl;
-    long p;
-    p=max(g,h,i);
-    cout<<"max_long="<<p<<endl;
-    
     return 0;
 }
