@@ -1,13 +1,49 @@
 #include<iostream>
 using namespace std;
+int max(int a,int b,int c)
+{
+    if (b>a)
+        a=b;
+    if(c>a)
+        a=c;
+
+    return a;
+}
+float max(float a,float b,float c)
+{
+    if (b>a)
+        a=b;
+    if(c>a)
+        a=c;
+
+    return a;
+}
+long max(long a,long b,long c)
+{
+    if (b>a)
+        a=b;
+    if(c>a)
+        a=c;
+
+    return a;
+}
+
 int main(void)
 {
-    cout<<"please enter your name and age: "<<endl;
-    char name[10];
-    int age;
-    cin>>name;
-    cin>>age;
-    cout<<"your name is "<<name<<endl;
-    cout<<"your age is "<<age<<endl;
+    int a,b,c;
+    float d,e,f;
+    long g,h,i;
+
+    cin>>a>>b>>c>>d>>e>>f>>g>>h>>i;
+    int m;
+    m=max(a,b,c);
+    cout<<"max_int="<<m<<endl;
+    float n;
+    n=max(d,e,f);
+    cout<<"max_float="<<n<<endl;
+    long p;
+    p=max(g,h,i);
+    cout<<"max_long="<<p<<endl;
+    
     return 0;
 }
