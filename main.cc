@@ -1,19 +1,17 @@
 #include<iostream>
-#include<string.h>
 using namespace std;
-struct Student{
-    char name[100];
-    int num;
-    char sex;
+class Time{
+    public:
+        int hour;
+        int minute;
+        int sec;
 };
 int main(void)
 {
-    Student *p;
-    p=new Student;
-    strcpy(p->name,"wang yun");
-    p->num=10123;
-    p->sex='M';
-    cout<<p->name<<" "<<p->num<<" "<<p->sex<<endl;
-    delete p;
+    Time t1;
+    cin>>t1.hour;
+    cin>>t1.minute;
+    cin>>t1.sec;
+    cout<<t1.hour<<":"<<t1.minute<<":"<<t1.sec<<endl;
     return 0;
 }
