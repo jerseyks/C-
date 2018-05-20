@@ -1,19 +1,14 @@
 #include<iostream>
 #include<class.h>
-Time::Time()
+
+Box::Box(int h,int w,int len)
 {
-    hour=12;
-    minute=11;
-    sec=10;
-}
-void Time::set_time(void)
-{
-    cin>>hour;
-    cin>>minute;
-    cin>>sec;
+    height=h;
+    width=w;
+    length=len;
 }
 
-void Time::show_time(void)
+int Box::volume(void)
 {
-    cout<<hour<<":"<<minute<<":"<<sec<<endl;
+    return (height*width*length);
 }

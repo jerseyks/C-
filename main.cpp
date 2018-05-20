@@ -2,11 +2,9 @@
 #include<class.h>
 int main(void)
 {
-    Time t1;
-    t1.set_time();
-    t1.show_time();
-    Time t2;
-    // t2.set_time();
-    t2.show_time();
+    Box box1(12,25,30);
+    cout<<"The volume of box1 is "<<box1.volume()<<endl;
+    Box box2(15,30,21);
+    cout<<"The volume of box2 is "<<box2.volume()<<endl;
     return 0;
 }

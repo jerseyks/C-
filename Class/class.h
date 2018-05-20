@@ -1,15 +1,14 @@
 #ifndef __CLASS_H
 #define __CLASS_H
 using namespace std;
-class Time{
+class Box{
     public:
-        Time();
-        void set_time(void);
-        void show_time(void);
+        Box(int,int,int);
+        int volume(void);
     private:
-        int hour;
-        int minute;
-        int sec;
+        int height;
+        int width;
+        int length;
 };
 
 
