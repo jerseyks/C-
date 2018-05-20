@@ -1,14 +1,5 @@
 #include<iostream>
-using namespace std;
-class Array_max{
-    public:
-        void set_value(void);
-        void max_value(void);
-        void show_value(void);
-    private:
-        int array[10];
-        int max;
-};
+#include<class.h>
 void Array_max::set_value(void)
 {
     int i;
@@ -28,12 +19,4 @@ void Array_max::max_value(void)
 void Array_max::show_value(void)
 {
     cout<<"max="<<max<<endl;
-}
-int main(void)
-{
-    Array_max arrmax;
-    arrmax.set_value();
-    arrmax.max_value();
-    arrmax.show_value();
-    return 0;
 }

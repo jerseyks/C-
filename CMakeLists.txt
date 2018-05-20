@@ -2,8 +2,11 @@ cmake_minimum_required (VERSION 3.5)
 
 project(EXE)
 
-aux_source_directory(. DIR_SRCS)
+include_directories(Class)
 
-add_executable(${CMAKE_PROJECT_NAME} main.cc)
+aux_source_directory(. DIR_SRCS)
+aux_source_directory(Class CLASS_SRC)
+
+add_executable(${CMAKE_PROJECT_NAME} ${DIR_SRCS} ${CLASS_SRC})
 
 
