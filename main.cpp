@@ -2,9 +2,11 @@
 #include<class.h>
 int main(void)
 {
-    Array_max arrmax;
-    arrmax.set_value();
-    arrmax.max_value();
-    arrmax.show_value();
+    Time t1;
+    t1.set_time();
+    t1.show_time();
+    Time t2;
+    // t2.set_time();
+    t2.show_time();
     return 0;
 }
