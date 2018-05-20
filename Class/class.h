@@ -3,12 +3,7 @@
 using namespace std;
 class Time{
     public:
-        Time()
-        {
-            hour=0;
-            minute=0;
-            sec=0;
-        };
+        Time();
         void set_time(void);
         void show_time(void);
     private:
