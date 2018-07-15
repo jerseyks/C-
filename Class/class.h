@@ -5,9 +5,8 @@ using namespace std;
 class Box
 {
     public:
-        Box();
-        Box(int h,int w ,int len);
-        int volume(void);
+        Box(int h=10,int w=10,int l=10);
+        int volume();
     private:
         int height;
         int width;
