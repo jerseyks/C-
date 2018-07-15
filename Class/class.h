@@ -6,7 +6,7 @@ class Box
 {
     public:
         Box();
-        Box(int,int,int);
+        Box(int h,int w ,int len);
         int volume(void);
     private:
         int height;
