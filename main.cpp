@@ -2,26 +2,34 @@
 
 #include<iostream>
 using namespace std;
+
+class Student
+{
+    private:
+        int num;
+        float score;
+    public:
+        void setdata(void)
+        {
+            cin>>num;
+            cin>>score;
+        };
+        void display(void)
+        {
+            cout<<"num="<<num<<endl;
+            cout<<"score="<<score<<endl;
+        };
+};
+
+Student stud1,stud2;
 int main(void)
 {
-    int max(int x,int y);
-
-    int a,b,c;
-    cin>>a>>b;
-    c=max(a,b);
-    cout<<"max="<<c<<endl;
+    stud1.setdata();
+    stud2.setdata();
+    stud1.display();
+    stud2.display();
 
     return 0;
-}
-
-int max(int x,int y)
-{
-    int z;
-    if(x>y)
-        z=x;
-    else
-        z=y;
-    return z;
 }
 
 
