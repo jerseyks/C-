@@ -4,13 +4,24 @@
 using namespace std;
 int main(void)
 {
-    int a,b,sum;
+    int max(int x,int y);
+
+    int a,b,c;
     cin>>a>>b;
-    sum=a+b;
-    cout<<"a+b="<<sum<<endl;
-    
+    c=max(a,b);
+    cout<<"max="<<c<<endl;
 
     return 0;
+}
+
+int max(int x,int y)
+{
+    int z;
+    if(x>y)
+        z=x;
+    else
+        z=y;
+    return z;
 }
 
 
