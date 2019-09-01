@@ -6,7 +6,7 @@ Box::Box(int h,int w,int l)
     width = w;
     length = l;
 }
-int Box::volume()
+int Box::volume(void)
 {
     return (height*width*length);
 }
