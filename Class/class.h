@@ -1,17 +1,32 @@
 #ifndef __CLASS_H
 #define __CLASS_H
+#include<string>
 #include<iostream>
 using namespace std;
-class Box
+class Student
 {
     public:
-        Box(int h=10,int w=10,int len=10);
-
-        int volume(void);
+        Student(int n,string nam,char s)                //注意声明和定义的区别,声明有分号,定义没有分号结尾.
+        {
+            num=n;
+            name=nam;
+            sec=s;
+            cout<<"Constructor called."<<endl;
+        }
+        ~Student()
+        {
+            cout<<"Destructor called."<<endl;
+        }
+        void display(void)
+        {
+            cout<<"num: "<<num<<endl;
+            cout<<"name: "<<name<<endl;
+            cout<<"sec: "<<sec<<endl;
+        }
     private:
-        int height;
-        int width;
-        int length;
+        int num;
+        string name;
+        char sec;
 };
 
 
