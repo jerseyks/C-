@@ -3,19 +3,19 @@
 #include<iostream>
 using namespace std;
 
-void swap(int *p1,int *p2)  //把两个地址中的内容进行交换
+void swap(int &a,int &b)  
 {
     int temp;
-    temp=*p1;
-    *p1=*p2;
-    *p2=temp;
-    cout<<"*p1="<<*p1<<" "<<"*p2="<<*p2<<endl;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<"a="<<a<<" "<<"b="<<b<<endl;
 }
 
 int main(void)
 {
     int i=3,j=5;
-    swap(&i,&j);        
+    swap(i,j);      //本质上也是对地址中的内容进行操作     
     cout<<"i="<<i<<" "<<"j="<<j<<endl;
 
 
