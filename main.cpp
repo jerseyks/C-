@@ -2,9 +2,13 @@
 
 #include<iostream>
 using namespace std;
+
 class Time
 {
     public:
+        void set_time();
+        void show_time();
+    private:
         int hour;
         int minute;
         int sec;
@@ -12,27 +16,25 @@ class Time
 
 int main(void)
 {
-    void set_time(Time &t,int hour=0,int minute=0,int sec=0);       //函数声明
-    void show_time(Time &t);
-
     Time t1;
-    set_time(t1,12,23,34);
-    show_time(t1);
+    t1.set_time();
+    t1.show_time();
     Time t2;
-    set_time(t2);
-    show_time(t2);
+    t2.set_time();
+    t2.show_time();
 
     return 0;
 }
 
-void set_time(Time &t,int hour,int minute,int sec)      //定义函数时不必再制定默认参数
+void Time::set_time(void)
 {
-    t.hour=hour;
-    t.minute=minute;
-    t.sec=sec;
+    cin>>hour;
+    cin>>minute;
+    cin>>sec;
 }
-void show_time(Time &t)
+
+void Time::show_time(void)
 {
-    cout<<t.hour<<":"<<t.minute<<":"<<t.sec<<endl;
+    cout<<hour<<":"<<minute<<":"<<sec<<endl;
 }
 
