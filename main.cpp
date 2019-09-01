@@ -3,20 +3,18 @@
 #include<iostream>
 using namespace std;
 
-void swap(int &a,int &b)  
+inline int max(int a,int b,int c)
 {
-    int temp;
-    temp=a;
-    a=b;
-    b=temp;
-    cout<<"a="<<a<<" "<<"b="<<b<<endl;
+    if(b>a) a=b;
+    if(c>a) a=c;
+    return a;
 }
 
 int main(void)
 {
-    int i=3,j=5;
-    swap(i,j);      //本质上也是对地址中的内容进行操作     
-    cout<<"i="<<i<<" "<<"j="<<j<<endl;
+    int i=7,j=10,k=25,m;
+    m=max(i,j,k);
+    cout<<"max="<<m<<endl;
 
 
     return 0;
