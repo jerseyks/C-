@@ -1,11 +1,12 @@
 #include<class.h>
 
-Box::Box(int h,int w,int l)
+Box::Box()
 {
-    height = h;
-    width = w;
-    length = l;
+    height=10;
+    width=10;
+    length=10;
 }
+
 int Box::volume(void)
 {
     return (height*width*length);
