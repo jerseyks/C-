@@ -5,6 +5,12 @@ using namespace std;
 class Time
 {
     public:
+        Time()
+        {
+            hour=0;
+            minute=0;
+            sec=0;
+        };
         void set_time(void);
         void show_time(void);
     private:
@@ -12,16 +18,6 @@ class Time
         int minute;
         int sec;
 };
-
-int main(void)
-{
-    Time t;
-    t.set_time();
-    t.show_time();
-    
-    return 0;
-}
-
 
 void Time::set_time(void)
 {
@@ -32,6 +28,19 @@ void Time::set_time(void)
 void Time::show_time(void)
 {
     cout<<hour<<":"<<minute<<":"<<sec<<endl;
+}
+
+int main(void)
+{
+    Time t1;
+    t1.set_time();
+    t1.show_time();
+    
+    Time t2;
+    t2.set_time();
+    t2.show_time();
+    
+    return 0;
 }
 
 
