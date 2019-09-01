@@ -18,6 +18,12 @@ int main(void)
     cin>>t1.sec;
     cout<<t1.hour<<":"<<t1.minute<<":"<<t1.sec<<endl;
 
+    Time t2;
+    cin>>t2.hour;
+    cin>>t2.minute;
+    cin>>t2.sec;
+    cout<<t2.hour<<":"<<t2.minute<<":"<<t2.sec<<endl;
+
     return 0;
 }
 
