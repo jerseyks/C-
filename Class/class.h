@@ -10,8 +10,19 @@ class Time
         int hour;
         int minute;
         int sec;
-        void get_time(void);
 };
+
+Time::Time(int h,int m,int s)
+{
+    hour=h;
+    minute=m;
+    sec=s;
+}
+
+void fun(Time &t)
+{
+    t.hour=18;
+}
 
 
 #endif/*__CLASS_H*/
