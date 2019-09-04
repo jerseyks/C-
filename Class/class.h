@@ -3,26 +3,17 @@
 
 #include<iostream>
 using namespace std;
-class Time
+class Box
 {
     public:
-        Time(int,int,int);
-        int hour;
-        int minute;
-        int sec;
+        Box(int h=10,int w=10,int len=10);
+        int volume(void);
+    private:
+        int height;
+        int width;
+        int length;
 };
 
-Time::Time(int h,int m,int s)
-{
-    hour=h;
-    minute=m;
-    sec=s;
-}
-
-void fun(Time &t)
-{
-    t.hour=18;
-}
 
 
 #endif/*__CLASS_H*/
