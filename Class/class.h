@@ -6,10 +6,9 @@ using namespace std;
 class Box
 {
     public:
-        Box(int h=10,int w=10,int len=10);
+        Box(int w ,int len);
         int volume(void);
-    private:
-        int height;
+        static int height;
         int width;
         int length;
 };

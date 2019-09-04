@@ -3,12 +3,12 @@
 
 int main(void)
 {
-    Box box1(15,30,25),box2;
+    Box a(15,20),b(20,30);
+    cout<<a.height<<endl;
+    cout<<b.height<<endl;
 
-    cout<<"The volume of box1 is "<<box1.volume()<<endl;
-    
-    box2=box1;
-    cout<<"The volume of box2 is "<<box2.volume()<<endl;
+    cout<<Box::height<<endl;
+    cout<<a.volume();
 
     return 0;
 }
