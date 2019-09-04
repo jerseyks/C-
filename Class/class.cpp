@@ -1,6 +1,16 @@
 #include<class.h>
 
-int Box::volume(void)
+Time::Time(int h,int m,int s)
 {
-    return (height*width*length);
+    hour=h;
+    minute=m;
+    sec=s;
 }
+
+void Time::get_time(void)
+{
+    cout<<hour<<":"<<minute<<":"<<sec<<endl;
+}
+
+
+

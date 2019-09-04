@@ -3,15 +3,14 @@
 
 #include<iostream>
 using namespace std;
-class Box
+class Time
 {
     public:
-        Box(int h=10,int w=12,int len=15):height(h),width(w),length(len){};
-        int volume(void);    
-    private:
-        int height;
-        int width;
-        int length;
+        Time(int,int,int);
+        int hour;
+        int minute;
+        int sec;
+        void get_time(void);
 };
 
 
