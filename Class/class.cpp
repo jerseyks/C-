@@ -7,10 +7,20 @@ Time::Time(int h,int m,int s)
     sec=s;
 }
 
-void display(Time &t)
+void Time::display(Date &d)
 {
-    cout<<t.hour<<":"<<t.minute<<":"<<t.sec<<endl;
+    cout<<d.month<<":"<<d.day<<":"<<d.year<<endl;
+    cout<<hour<<":"<<minute<<":"<<sec<<endl;
 }
+
+Date::Date(int m,int d,int y)
+{
+    month=m;
+    day=d;
+    year=y;
+}
+
+
 
 
 
