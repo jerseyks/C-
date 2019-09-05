@@ -3,29 +3,26 @@
 
 #include<iostream>
 using namespace std;
-class Date;
-class Time
+template<class numtype>
+class Compare
 {
     public:
-        Time(int,int,int);
-        void display(Date &);
+        Compare(numtype a,numtype b)
+        {
+            x=a;
+            y=b;
+        }
+        numtype max(void)
+        {
+            return (x>y)?x:y;
+        }
+        numtype min(void)
+        {
+            return (x<y)?x:y;
+        }
     private:
-        int hour;
-        int minute;
-        int sec;
+        numtype x,y;
 };
-
-class Date
-{
-    public:
-        Date(int,int,int);
-        friend void Time::display(Date &);
-    private:
-        int month;
-        int day;
-        int year;
-};
-
 
 
 
