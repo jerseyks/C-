@@ -3,26 +3,26 @@
 
 #include<iostream>
 using namespace std;
-template<class numtype>
-class Compare
+class Complex
 {
     public:
-        Compare(numtype a,numtype b)
+        Complex()
         {
-            x=a;
-            y=b;
+            real=0;
+            imag=0;
         }
-        numtype max(void)
+        Complex(double r,double i)
         {
-            return (x>y)?x:y;
+            real=r;
+            imag=i;
         }
-        numtype min(void)
-        {
-            return (x<y)?x:y;
-        }
+        Complex complex_add(Complex &c2);
+        void display(void);
     private:
-        numtype x,y;
+        double real;
+        double imag;
 };
+
 
 
 

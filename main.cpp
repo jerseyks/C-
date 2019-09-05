@@ -3,17 +3,11 @@
 
 int main(void)
 {
-    Compare<int>cmp1(3,7);
-    cout<<cmp1.max()<<" is the maximum of two interger numbers."<<endl;
-    cout<<cmp1.min()<<" is the maximum of two interger numbers."<<endl;
-
-    Compare<float>cmp2(45.78,93.6);
-    cout<<cmp2.max()<<" is the maximum of two interger numbers."<<endl;
-    cout<<cmp2.min()<<" is the maximum of two interger numbers."<<endl;
-
-    Compare<char>cmp3('a','A');
-    cout<<cmp3.max()<<" is the maximum of two interger numbers."<<endl;
-    cout<<cmp3.min()<<" is the maximum of two interger numbers."<<endl;
+    Complex c1(3,4),c2(5,-10),c3;
+    c3=c1.complex_add(c2);
+    cout<<"c1=";c1.display();
+    cout<<"c2=";c2.display();
+    cout<<"c1+c2=";c3.display();
 
     return 0;
 }
