@@ -9,7 +9,7 @@ Time::Time(int h,int m,int s)
 
 void Time::display(Date &d)
 {
-    cout<<d.month<<":"<<d.day<<":"<<d.year<<endl;
+    cout<<d.month<<"/"<<d.day<<"/"<<d.year<<endl;
     cout<<hour<<":"<<minute<<":"<<sec<<endl;
 }
 
