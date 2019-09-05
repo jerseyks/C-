@@ -3,12 +3,20 @@
 
 int main(void)
 {
-    Box a(15,20),b(20,30);
-    cout<<a.height<<endl;
-    cout<<b.height<<endl;
+    Student stud[3]={
+        Student (1001,18,70),
+        Student (1002,19,78),
+        Student (1005,20,98)
+    };
 
-    cout<<Box::height<<endl;
-    cout<<a.volume();
+    int n;
+    cout<<"please input the number of student:";
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        stud[i].total();
+    }
+    cout<<"the average score of "<<n<<" student is "<<Student::average()<<endl;
 
     return 0;
 }

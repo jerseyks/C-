@@ -1,16 +1,23 @@
 #include<class.h>
 
-Box::Box(int w,int len)
+void Student::total(void)
 {
-    width=w;
-    length=len;
+    sum+=score;
+    count++;
 }
 
-int Box::volume(void)
+float Student::average(void)
 {
-    return (height*width*length);
+    return (sum/count);
 }
 
-int Box::height=10;
+float Student::sum=0;
+int Student::count=0;
+
+
+
+
+
+
 
 
