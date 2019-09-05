@@ -3,19 +3,18 @@
 
 #include<iostream>
 using namespace std;
-class Student
+class Time
 {
     public:
-        Student(int n,int a,float s):num(n),age(a),score(s){};
-        void total(void);
-        static float average(void);
+        Time(int,int,int);
+        friend void display(Time &);
     private:
-        int num;
-        int age;
-        float score;
-        static float sum;
-        static int count;
+        int hour;
+        int minute;
+        int sec;
 };
+
+
 
 
 

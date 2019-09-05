@@ -1,19 +1,16 @@
 #include<class.h>
 
-void Student::total(void)
+Time::Time(int h,int m,int s)
 {
-    sum+=score;
-    count++;
+    hour=h;
+    minute=m;
+    sec=s;
 }
 
-float Student::average(void)
+void display(Time &t)
 {
-    return (sum/count);
+    cout<<t.hour<<":"<<t.minute<<":"<<t.sec<<endl;
 }
-
-float Student::sum=0;
-int Student::count=0;
-
 
 
 
