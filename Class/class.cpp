@@ -1,13 +1,9 @@
 #include<class.h>
 
 
-Complex Complex::operator+(Complex &c2)
+Complex operator+(Complex &c1,Complex &c2)
 {
-    Complex c;
-    c.real=real+c2.real;
-    c.imag=imag+c2.imag;
-
-    return c;
+    return Complex(c1.real+c2.real,c1.imag+c2.imag);
 }
 
 

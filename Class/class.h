@@ -16,7 +16,7 @@ class Complex
             real=r;
             imag=i;
         }
-        Complex operator+(Complex &c2);
+        friend Complex operator+(Complex &c1,Complex &c2);
         void display(void);
     private:
         double real;
