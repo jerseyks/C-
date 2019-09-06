@@ -2,21 +2,26 @@
 #define __CLASS_H
 
 #include<iostream>
-#include<string.h>
 using namespace std;
-class String
+class Time
 {
     public:
-        String()
+        Time()
         {
-            p=NULL;
+            minute=0;
+            sec=0;
         }
-        String(char *str);
-        friend bool operator>(String &string1,String &string2);
+        Time(int m,int s):minute(m),sec(s){}//; //有无;号都可以.
 
-        void display(void);
+        Time operator++(void);
+
+        void display(void)
+        {
+            cout<<minute<<":"<<sec<<endl;
+        }
     private:
-        char *p;
+        int minute;
+        int sec;
 };
 
 

@@ -1,25 +1,14 @@
 #include<class.h>
 
-
-String::String(char *str)
+Time Time::operator++(void)
 {
-    p=str;
+    if(++sec>=60)
+    {
+        sec-=60;
+        ++minute;
+    }
+    return *this;
 }
-
-
-void String::display(void)
-{
-    cout<<p;
-}
-
-bool operator>(String &string1,String &string2)
-{
-    if(strcmp(string1.p,string2.p)>0)
-        return true;
-    else
-        return false;
-}
-
 
 
 
