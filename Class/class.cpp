@@ -1,28 +1,16 @@
 #include<class.h>
 
-Time Time::operator++(void)
+Complex Complex::operator+(Complex &c2)
 {
-    if(++sec>=60)
-    {
-        sec-=60;
-        ++minute;
-    }
-    return *this;
+    return Complex(real+c2.real,imag+c2.imag);
 }
 
-
-Time Time::operator++(int)
+ostream & operator<<(ostream &output,Complex &c)
 {
-    Time temp(*this);
-    sec++;
-    if(sec>=60)
-    {
-        sec-=60;
-        ++minute;
-    }
-    return temp;
-}
+    output<<"("<<c.real<<"+"<<c.imag<<"i)"<<endl;
 
+    return output;
+}
 
 
 

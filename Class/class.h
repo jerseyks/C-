@@ -3,26 +3,24 @@
 
 #include<iostream>
 using namespace std;
-class Time
+class Complex
 {
     public:
-        Time()
+        Complex()
         {
-            minute=0;
-            sec=0;
+            real=0;
+            imag=0;
         }
-        Time(int m,int s):minute(m),sec(s){};//; //有无;号都可以.
-
-        Time operator++(void);
-        Time operator++(int);
-
-        void display(void)
+        Complex(double r,double i)
         {
-            cout<<minute<<":"<<sec<<endl;
+            real=r;
+            imag=i;
         }
+        Complex operator+(Complex &c2);
+        friend ostream& operator<<(ostream&,Complex&);
     private:
-        int minute;
-        int sec;
+        double real;
+        double imag;
 };
 
 
