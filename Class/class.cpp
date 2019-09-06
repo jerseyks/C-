@@ -1,7 +1,7 @@
 #include<class.h>
 
 
-Complex Complex::complex_add(Complex &c2)
+Complex Complex::operator+(Complex &c2)
 {
     Complex c;
     c.real=real+c2.real;
