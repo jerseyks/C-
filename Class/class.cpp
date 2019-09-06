@@ -11,4 +11,19 @@ Time Time::operator++(void)
 }
 
 
+Time Time::operator++(int)
+{
+    Time temp(*this);
+    sec++;
+    if(sec>=60)
+    {
+        sec-=60;
+        ++minute;
+    }
+    return temp;
+}
+
+
+
+
 
