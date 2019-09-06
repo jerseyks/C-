@@ -3,26 +3,18 @@
 
 #include<iostream>
 using namespace std;
-class Complex
+class String
 {
     public:
-        Complex()
+        String()
         {
-            real=0;
-            imag=0;
+            p=NULL;
         }
-        Complex(double r,double i)
-        {
-            real=r;
-            imag=i;
-        }
-        friend Complex operator+(Complex &c1,Complex &c2);
+        String(char *str);
         void display(void);
     private:
-        double real;
-        double imag;
+        char *p;
 };
-
 
 
 

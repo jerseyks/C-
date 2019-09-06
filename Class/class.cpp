@@ -1,17 +1,16 @@
 #include<class.h>
 
 
-Complex operator+(Complex &c1,Complex &c2)
+String::String(char *str)
 {
-    return Complex(c1.real+c2.real,c1.imag+c2.imag);
+    p=str;
 }
 
 
-void Complex::display(void)
+void String::display(void)
 {
-    cout<<"("<<real<<","<<imag<<"i)"<<endl;
+    cout<<p;
 }
-
 
 
 
