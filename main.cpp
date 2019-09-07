@@ -3,10 +3,10 @@
 
 int main(void)
 {               
-    Complex c1,c2;
-    cin>>c1>>c2;
-    cout<<"c1="<<c1<<endl;
-    cout<<"c2="<<c2<<endl;
+    Complex c1(3,4),c2(5,-10),c3;
+    double d;
+    d=2.5+c1;
+    cout<<d<<endl;
 
     return 0;
 }
