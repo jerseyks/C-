@@ -11,15 +11,18 @@ class Complex
             real=0;
             imag=0;
         }
+        Complex(double r)
+        {
+            real=r;
+            imag=0;
+        }
         Complex(double r,double i)
         {
             real=r;
             imag=i;
         }
-        operator double()
-        {
-            return real;
-        }
+        friend Complex operator+(Complex c1,Complex c2);
+        void display(void);
     private:
         double real;
         double imag;
