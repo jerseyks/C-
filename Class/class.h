@@ -4,51 +4,40 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
-class Student
+class Point
 {
     public:
-        Student(int,string,float);
-        void display(void);
-    private:
-        int num;
-        string name;
-        float score;
+        Point(float x=0,float y=0);
+        void setPoint(float,float);
+        float getX(void) const
+        {
+            return x;
+        }
+        float getY(void) const
+        {
+            return y;
+        }
+        friend ostream &operator<<(ostream &,const Point &);
+    protected:
+        float x,y;
 };
 
-Student::Student(int n,string nam,float s)
+Point::Point(float a,float b)
 {
-    num=n;
-    name=nam;
-    score=s;
+    x=a;
+    y=b;
 }
 
-
-void Student::display(void)
+void Point::setPoint(float a,float b)
 {
-    cout<<endl<<"num: "<<num<<endl;
-    cout<<"name: "<<name<<endl;
-    cout<<"score: "<<score<<endl;
+    x=a;
+    y=b;
 }
 
-
-class Graduate:public Student
+ostream &operator<<(ostream &output,const Point &p)
 {
-    public:
-        Graduate(int,string,float,float);
-        void display(void);
-    private:
-        float wage;
-};
-
-Graduate::Graduate(int n,string nam,float s,float w):Student(n,nam,s),wage(w)
-{
-
-}
-
-void Graduate::display(void)
-{
-    Student::display();
-    cout<<"wage: "<<wage<<endl;
+    output<<"["<<p.x<<","<<p.y<<"]"<<endl;
+    return output;
 }
 
 
