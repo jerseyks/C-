@@ -2,38 +2,23 @@
 #define __CLASS_H
 
 #include<iostream>
+#include<string.h>
 using namespace std;
 class Student
 {
     public:
-        void get_value(void)
-        {
-            cin>>num>>name>>sex;
-        }
-        void display(void)
-        {
-            cout<<"num: "<<num<<endl;
-            cout<<"name: "<<name<<endl;
-            cout<<"sex: "<<sex<<endl;
-        }
-    private:
+
+    protected:
         int num;
         string name;
         char sex;
 };
 
-class Student1:private Student
+class Student1:protected Student
 {
     public:
-        void get_value_1(void)
-        {
-            cin>>age>>addr;
-        }
-        void display_1(void)
-        {
-            cout<<"age: "<<age<<endl;
-            cout<<"addr: "<<addr<<endl;
-        }
+        void get_value1(void);
+        void display1(void);
     private:
         int age;
         string addr;
