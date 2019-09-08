@@ -3,9 +3,8 @@
 
 int main(void)
 {               
-    Student1 stud1(10010,"wang-li",10001,"li_jun",19,"115beijingroad");
-    stud1.show();
-    stud1.show_monitor();
+    Student2 stud(10010,"Li",17,89);
+    stud.show_all();
 
     return 0;
 }

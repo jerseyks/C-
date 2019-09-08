@@ -21,32 +21,40 @@ class Student
         int num;
         string name;
 };
-
 class Student1:public Student
 {
     public:
-        Student1(int n,string nam,int n1,string nam1,int a,string ad):Student(n,nam),monitor(n1,nam1)
+        Student1(int n,string nam,int a):Student(n,nam)
         {
-            age=a;
-            addr=ad;
+            age=a;           
         }
         void show(void)
         {
-            cout<<"this student is: "<<endl;
             display();
             cout<<"age: "<<age<<endl;
-            cout<<"address: "<<addr<<endl<<endl;
-        }
-        void show_monitor(void)
-        {
-            cout<<endl<<"class monitor is: "<<endl;
-            monitor.display();
         }
     private:
-        Student monitor;
         int age;
-        string addr;
 };
+
+class Student2:public Student1
+{
+    public:
+        Student2(int n,string nam,int a,int s):Student1(n,nam,a)
+        {
+            score=s;           
+        }
+        void show_all(void)
+        {
+            show();
+            cout<<"score: "<<score<<endl;
+        }
+    private:
+        int score;
+};
+
+
+
 
 
 
