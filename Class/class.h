@@ -22,7 +22,7 @@ class Student
         char sex;
 };
 
-class Student1:public Student
+class Student1:private Student
 {
     public:
         void get_value_1(void)

@@ -3,11 +3,9 @@
 
 int main(void)
 {               
-    Student1 stud;
-    stud.get_value();
-    stud.get_value_1();
-    stud.display();
-    stud.display_1();
+    Student1 stud1;
+    stud1.get_value_1();
+    stud1.display_1();
 
     return 0;
 }
