@@ -3,8 +3,8 @@
 
 int main(void)
 {               
-    Student2 stud(10010,"Li",17,89);
-    stud.show_all();
+    Graduate grad1("Wang_li",24,'f',"assistant",89.5,2400);
+    grad1.show();
 
     return 0;
 }
