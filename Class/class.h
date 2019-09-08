@@ -7,43 +7,43 @@ using namespace std;
 class Student
 {
     public:
-        Student(int n,string nam,char s)
+        Student(int n,string nam)
         {
             num=n;
             name=nam;
-            sex=s;
         }
-        ~Student()
+        void display(void)
         {
-
+            cout<<"num: "<<num<<endl;
+            cout<<"name: "<<name<<endl;
         }
     protected:
         int num;
         string name;
-        char sex;
 };
 
 class Student1:public Student
 {
     public:
-        Student1(int n,string nam,char s,int a,string ad):Student(n,nam,s)
+        Student1(int n,string nam,int n1,string nam1,int a,string ad):Student(n,nam),monitor(n1,nam1)
         {
             age=a;
             addr=ad;
         }
         void show(void)
         {
-            cout<<"num: "<<num<<endl;
-            cout<<"name: "<<name<<endl;
-            cout<<"sex: "<<sex<<endl;
+            cout<<"this student is: "<<endl;
+            display();
             cout<<"age: "<<age<<endl;
             cout<<"address: "<<addr<<endl<<endl;
         }
-        ~Student1()
+        void show_monitor(void)
         {
-            
+            cout<<endl<<"class monitor is: "<<endl;
+            monitor.display();
         }
     private:
+        Student monitor;
         int age;
         string addr;
 };
