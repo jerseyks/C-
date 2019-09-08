@@ -3,32 +3,41 @@
 
 #include<iostream>
 using namespace std;
-class Complex
+class Student
 {
     public:
-        Complex()
+        void get_value(void)
         {
-            real=0;
-            imag=0;
+            cin>>num>>name>>sex;
         }
-        Complex(double r)
+        void display(void)
         {
-            real=r;
-            imag=0;
+            cout<<"num: "<<num<<endl;
+            cout<<"name: "<<name<<endl;
+            cout<<"sex: "<<sex<<endl;
         }
-        Complex(double r,double i)
-        {
-            real=r;
-            imag=i;
-        }
-        friend Complex operator+(Complex c1,Complex c2);
-        void display(void);
     private:
-        double real;
-        double imag;
+        int num;
+        string name;
+        char sex;
 };
 
-
+class Student1:public Student
+{
+    public:
+        void get_value_1(void)
+        {
+            cin>>age>>addr;
+        }
+        void display_1(void)
+        {
+            cout<<"age: "<<age<<endl;
+            cout<<"addr: "<<addr<<endl;
+        }
+    private:
+        int age;
+        string addr;
+};
 
 
 

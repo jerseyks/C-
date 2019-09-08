@@ -3,10 +3,11 @@
 
 int main(void)
 {               
-    Complex c1(3,4),c2(5,-10),c3;
-
-    c3=c1+2.5;
-    c3.display();
+    Student1 stud;
+    stud.get_value();
+    stud.get_value_1();
+    stud.display();
+    stud.display_1();
 
     return 0;
 }
