@@ -4,52 +4,47 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
-class Teacher
+class Person
 {
     public:
-        Teacher(string nam,int a,string t)
+        Person(string nam,char s,int a)
         {
             name=nam;
+            sex=s;
             age=a;
-            title=t;
-        }
-        void display(void)
-        {
-            cout<<"name: "<<name<<endl;
-            cout<<"age: "<<age<<endl;
-            cout<<"title: "<<title<<endl;
         }
     protected:
         string name;
+        char sex;
         int age;
+};
+
+class Teacher:virtual public Person
+{
+    public:
+        Teacher(string nam,char s,int a,string t):Person(nam,s,a)
+        {
+            title=t;
+        }
+    protected:
         string title;
 };
 
-class Student
+class Student:virtual public Person
 {
     public:
-        Student(string nam,char s,float sco)
+        Student(string nam,char s,int a,float sco):Person(nam,s,a),score(sco)
         {
-            name1=nam;
-            sex=s;
-            score=sco;
-        }
-        void display1(void)
-        {
-            cout<<"name: "<<name1<<endl;
-            cout<<"sex: "<<sex<<endl;
-            cout<<"score: "<<score<<endl; 
+
         }
     protected:
-        string name1;
-        char sex;
         float score;
 };
 
 class Graduate:public Teacher,public Student
 {
     public:
-        Graduate(string nam ,int a,char s,string t,float sco,float w):Teacher(nam,a,t),Student(nam,s,sco),wage(w)
+        Graduate(string nam,char s,int a,string t,float sco,float w):Person(nam,s,a),Teacher(nam,s,a,t),Student(nam,s,a,sco),wage(w)
         {
 
         }
@@ -65,8 +60,6 @@ class Graduate:public Teacher,public Student
     private:
         float wage;
 };
-
-
 
 
 #endif/*__CLASS_H*/

@@ -3,7 +3,7 @@
 
 int main(void)
 {               
-    Graduate grad1("Wang_li",24,'f',"assistant",89.5,2400);
+    Graduate grad1("Wang_li",'f',24,"assistant",89.5,1200);
     grad1.show();
 
     return 0;
