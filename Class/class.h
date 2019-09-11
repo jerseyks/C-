@@ -2,7 +2,7 @@
 #define __CLASS_H
 
 #include<iostream>
-#include<cmath>
+#include<iomanip>
 using namespace std;
 
 

@@ -3,19 +3,22 @@
 
 int main(void)
 {               
-    float a,b,c,disc;
-    cout<<"please input a,b,c:";
-    cin>>a>>b>>c;
-    if(a==0)
-        cerr<<"a is equal to zero,error!"<<endl;
-    else
-        if((disc=b*b-4*a*c)<0)
-            cerr<<"disc=b*b-4*a*c<0"<<endl;
-        else
-        {
-            cout<<"x1="<<(-b+sqrt(disc))/(2*a)<<endl; 
-            cout<<"x2="<<(-b-sqrt(disc))/(2*a)<<endl;   
-        }   
+    int a;
+    cout<<"input a:";
+    cin>>a;
+    cout<<"dec:"<<dec<<a<<endl;
+    cout<<"hex:"<<hex<<a<<endl;
+    cout<<"oct:"<<setbase(8)<<a<<endl;
+    char *pt="china";
+    cout<<setw(10)<<pt<<endl;
+    cout<<setfill('*')<<setw(10)<<pt<<endl;
+
+
+    double pi=22.0/7.0;
+    cout<<setiosflags(ios::scientific)<<setprecision(8);
+    cout<<"pi="<<pi<<endl;
+    cout<<"pi="<<setprecision(4)<<pi<<endl;
+    cout<<"pi="<<setiosflags(ios::fixed)<<pi<<endl;
 
     return 0;
 }
