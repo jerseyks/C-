@@ -4,24 +4,27 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
-class Student
+class Point
 {
     public:
-        Student(int,string,float);
-        void display(void);
-    protected:
-        int num;
-        string name;
-        float score;
+        Point(){}
+        virtual ~Point()
+        {
+            cout<<"executing Point destructor"<<endl;
+        }
 };
 
-class Graduate:public Student
+
+class Circle:public Point
 {
     public:
-        Graduate(int,string,float,float);
-        void display(void);
+        Circle(){}
+        ~Circle()
+        {
+            cout<<"executing Circle destructor"<<endl;
+        }
     private:
-        float wage;
+        int radus;
 };
 
 
