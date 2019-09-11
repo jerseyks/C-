@@ -2,30 +2,9 @@
 #define __CLASS_H
 
 #include<iostream>
-#include<string.h>
+#include<cmath>
 using namespace std;
-class Point
-{
-    public:
-        Point(){}
-        virtual ~Point()
-        {
-            cout<<"executing Point destructor"<<endl;
-        }
-};
 
-
-class Circle:public Point
-{
-    public:
-        Circle(){}
-        ~Circle()
-        {
-            cout<<"executing Circle destructor"<<endl;
-        }
-    private:
-        int radus;
-};
 
 
 
